@@ -44,7 +44,7 @@
 <link href="../tidyverse-2.css" rel="stylesheet">
 
 <!--optional theme-->
-<link href="../.css" rel="stylesheet">
+<link href="../tidymodels.css" rel="stylesheet">
 
 
 
@@ -60,8 +60,10 @@ Users may pass data to augment via either the data argument or the
 newdata argument. If the user passes data to the data argument,
 it must be exactly the data that was used to fit the model
 object. Pass datasets to newdata to augment data that was not used
-during model fitting. This still requires that all columns used to fit
-the model are present.
+during model fitting. This still requires that at least all predictor
+variable columns used to fit the model are present. If the original outcome
+variable used to fit the model is not included in newdata, then no
+.resid column will be included in the output.
 Augment will often behave differently depending on whether data or
 newdata is given. This is because there is often information
 associated with training observations (such as influences or related)
@@ -81,12 +83,7 @@ encounter errors, try explicitly passing a tibble, or fitting the original
 model on data in a tibble.
 We are in the process of defining behaviors for models fit with various
 na.action arguments, but make no guarantees about behavior when data is
-missing at this time.
-augment.glmRob() has been removed from broom. We regret
-that we were unable to provide any warning for this change. The
-robust package does not provide the functionality necessary
-to implement an augment method. We are looking into supporting the
-robustbase package in the future." />
+missing at this time." />
 <meta property="og:image" content="https://broom.tidymodels.org/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -131,7 +128,7 @@ robustbase package in the future." />
         <a class="navbar-brand" href="../index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -172,7 +169,7 @@ robustbase package in the future." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -190,7 +187,7 @@ robustbase package in the future." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Augment data with information from a(n) glmRob object</h1>
-    <small class="dont-index">Source: <a href='http://github.com/tidymodels/broom/blob/master/R/robust-glmrob-tidiers.R'><code>R/robust-glmrob-tidiers.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidymodels/broom/blob/master/R/robust-glmrob-tidiers.R'><code>R/robust-glmrob-tidiers.R</code></a></small>
     <div class="hidden name"><code>augment.glmRob.Rd</code></div>
     </div>
 
@@ -205,14 +202,16 @@ columns in the original dataset.</p>
 <code>newdata</code> argument. If the user passes data to the <code>data</code> argument,
 it <strong>must</strong> be exactly the data that was used to fit the model
 object. Pass datasets to <code>newdata</code> to augment data that was not used
-during model fitting. This still requires that all columns used to fit
-the model are present.</p>
+during model fitting. This still requires that at least all predictor
+variable columns used to fit the model are present. If the original outcome
+variable used to fit the model is not included in <code>newdata</code>, then no
+<code>.resid</code> column will be included in the output.</p>
 <p>Augment will often behave differently depending on whether <code>data</code> or
 <code>newdata</code> is given. This is because there is often information
 associated with training observations (such as influences or related)
 measures that is not meaningfully defined for new observations.</p>
 <p>For convenience, many augment methods provide default <code>data</code> arguments,
-so that <code><a href='https://rdrr.io/pkg/generics/man/augment.html'>augment(fit)</a></code> will return the augmented training data. In these
+so that <code><a href='https://generics.r-lib.org/reference/augment.html'>augment(fit)</a></code> will return the augmented training data. In these
 cases, augment tries to reconstruct the original data based on the model
 object with varying degrees of success.</p>
 <p>The augmented dataset is always returned as a <a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble</a> with the
@@ -225,17 +224,12 @@ process, and that <code><a href='https://rdrr.io/r/splines/ns.html'>splines::ns(
 encounter errors, try explicitly passing a tibble, or fitting the original
 model on data in a tibble.</p>
 <p>We are in the process of defining behaviors for models fit with various
-<a href='https://rdrr.io/r/stats/na.action.html'>na.action</a> arguments, but make no guarantees about behavior when data is
+<code>na.action</code> arguments, but make no guarantees about behavior when data is
 missing at this time.</p>
-<p><code>augment.glmRob()</code> has been removed from broom. We regret
-that we were unable to provide any warning for this change. The
-<span class="pkg">robust</span> package does not provide the functionality necessary
-to implement an augment method. We are looking into supporting the
-<span class="pkg">robustbase</span> package in the future.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for glmRob</span>
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/augment.html'>augment</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://generics.r-lib.org/reference/augment.html'>augment</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -267,7 +261,7 @@ to implement an augment method. We are looking into supporting the
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

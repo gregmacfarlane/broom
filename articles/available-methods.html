@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../tidyverse-2.css" rel="stylesheet">
-<!--optional theme--><link href="../.css" rel="stylesheet">
+<!--optional theme--><link href="../tidymodels.css" rel="stylesheet">
 <meta property="og:title" content="Available methods">
 <meta property="og:description" content="broom">
 <meta property="og:image" content="https://broom.tidymodels.org/logo.png">
@@ -50,7 +50,7 @@
         <a class="navbar-brand" href="../index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -105,14 +105,14 @@
 
       
 
-      </header><div class="row">
+      </header><script src="available-methods_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Available methods</h1>
             
-            <h4 class="date">2020-06-09</h4>
+            <h4 class="date">2021-04-08</h4>
       
-      <small class="dont-index">Source: <a href="http://github.com/tidymodels/broom/blob/master/vignettes/available-methods.Rmd"><code>vignettes/available-methods.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tidymodels/broom/blob/master/vignettes/available-methods.Rmd"><code>vignettes/available-methods.Rmd</code></a></small>
       <div class="hidden name"><code>available-methods.Rmd</code></div>
 
     </div>
@@ -213,46 +213,58 @@
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">character</td>
+<td align="left">x</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
 <td align="left">cld</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">clm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">clmm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">coeftest</td>
 <td align="left">x</td>
-<td align="left"></td>
+<td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">confint.glht</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">confusionMatrix</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">coxph</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
+</tr>
+<tr class="odd">
+<td align="left">crr</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">cv.glmnet</td>
@@ -261,111 +273,111 @@
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">data.frame</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left">x</td>
+</tr>
+<tr class="even">
 <td align="left">default</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">density</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">dgCMatrix</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">dgTMatrix</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">dist</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">drc</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">durbinWatsonTest</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">emmGrid</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">epi.2by2</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">ergm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">factanal</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">felm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">fitdistr</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">fixest</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">ftable</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">gam</td>
 <td align="left">x</td>
 <td align="left">x</td>
-<td align="left"></td>
+<td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Gam</td>
 <td align="left">x</td>
 <td align="left">x</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">gamlss</td>
-<td align="left">x</td>
-<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -375,93 +387,93 @@
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">gee</td>
-<td align="left">x</td>
-<td align="left">x</td>
-<td align="left">x</td>
-</tr>
-<tr class="odd">
 <td align="left">geeglm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">glht</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">glm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">glmnet</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">glmrob</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">glmRob</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">gmm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">htest</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">ivreg</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">kappa</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">kde</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Kendall</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">kmeans</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">lavaan</td>
 <td align="left">x</td>
 <td align="left">x</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">leveneTest</td>
+<td align="left">x</td>
+<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -513,6 +525,18 @@
 <td align="left">x</td>
 </tr>
 <tr class="odd">
+<td align="left">logical</td>
+<td align="left">x</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">logitmfx</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left">x</td>
+</tr>
+<tr class="odd">
 <td align="left">lsmobj</td>
 <td align="left">x</td>
 <td align="left"></td>
@@ -531,7 +555,7 @@
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">mclogit</td>
+<td align="left">margins</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
@@ -569,38 +593,62 @@
 <tr class="even">
 <td align="left">mlm</td>
 <td align="left">x</td>
-<td align="left">x</td>
+<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">mlogit</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left">x</td>
+</tr>
+<tr class="even">
 <td align="left">muhaz</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">multinom</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
+<tr class="even">
+<td align="left">negbin</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
-<td align="left">nlrq</td>
+<td align="left">negbinmfx</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
-<td align="left">nls</td>
+<td align="left">nlrq</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
+<td align="left">nls</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left">x</td>
+</tr>
+<tr class="even">
 <td align="left">NULL</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">x</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">orcutt</td>
@@ -627,39 +675,51 @@
 <td align="left">x</td>
 </tr>
 <tr class="even">
+<td align="left">poissonmfx</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left">x</td>
+</tr>
+<tr class="odd">
 <td align="left">poLCA</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">polr</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Polygon</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Polygons</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">power.htest</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">prcomp</td>
 <td align="left">x</td>
 <td align="left"></td>
+<td align="left">x</td>
+</tr>
+<tr class="odd">
+<td align="left">probitmfx</td>
+<td align="left">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
@@ -669,67 +729,67 @@
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">Rchoice</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
 <td align="left">rcorr</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">ref.grid</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">regsubsets</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">ridgelm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">rlm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">rma</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">roc</td>
 <td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">rq</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">rqs</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
-<tr class="even">
-<td align="left">sarlm</td>
-<td align="left">x</td>
-<td align="left">x</td>
-<td align="left">x</td>
-</tr>
 <tr class="odd">
-<td align="left">scam</td>
+<td align="left">sarlm</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
@@ -789,9 +849,21 @@
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">summary.lm</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
 <td align="left">summary.plm</td>
 <td align="left">x</td>
 <td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">summaryDefault</td>
+<td align="left">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -861,6 +933,12 @@
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">varest</td>
+<td align="left">x</td>
+<td align="left">x</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
 <td align="left">zoo</td>
 <td align="left">x</td>
 <td align="left"></td>
@@ -884,7 +962,7 @@
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

@@ -44,7 +44,7 @@
 <link href="../tidyverse-2.css" rel="stylesheet">
 
 <!--optional theme-->
-<link href="../.css" rel="stylesheet">
+<link href="../tidymodels.css" rel="stylesheet">
 
 
 
@@ -94,7 +94,7 @@
         <a class="navbar-brand" href="../index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -197,9 +197,21 @@
       <tr>
         
         <td>
+          <p><code><a href="data.frame_tidiers.html">tidy(<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="data.frame_tidiers.html">augment(<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="data.frame_tidiers.html">glance(<i>&lt;data.frame&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidiers for data.frame objects</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="durbinWatsonTest_tidiers.html">tidy(<i>&lt;durbinWatsonTest&gt;</i>)</a></code> <code><a href="durbinWatsonTest_tidiers.html">glance(<i>&lt;durbinWatsonTest&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy/glance a(n) durbinWatsonTest object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="leveneTest_tidiers.html">tidy(<i>&lt;leveneTest&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy/glance a(n) leveneTest object</p></td>
       </tr><tr>
         
         <td>
@@ -212,12 +224,6 @@
           <p><code><a href="metafor_tidiers.html">tidy(<i>&lt;rma&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) rma object</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mgcv_tidy_gam.html">tidy(<i>&lt;gam&gt;</i>)</a></code> </p>
-        </td>
-        <td><p>Tidy a(n) gam object</p></td>
       </tr><tr>
         
         <td>
@@ -239,15 +245,15 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="tidy.Arima.html">tidy(<i>&lt;Arima&gt;</i>)</a></code> </p>
+          <p><code><a href="summary_tidiers.html">tidy(<i>&lt;summaryDefault&gt;</i>)</a></code> <code><a href="summary_tidiers.html">glance(<i>&lt;summaryDefault&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) Arima object</p></td>
+        <td><p>(Deprecated) Tidy summaryDefault objects</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="tidy.Gam.html">tidy(<i>&lt;Gam&gt;</i>)</a></code> </p>
+          <p><code><a href="tidy.Arima.html">tidy(<i>&lt;Arima&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) Gam object</p></td>
+        <td><p>Tidy a(n) Arima object</p></td>
       </tr><tr>
         
         <td>
@@ -260,6 +266,12 @@
           <p><code><a href="tidy.Mclust.html">tidy(<i>&lt;Mclust&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) Mclust object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="tidy.Rchoice.html">tidy(<i>&lt;Rchoice&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) Rchoice object</p></td>
       </tr><tr>
         
         <td>
@@ -389,6 +401,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="tidy.crr.html">tidy(<i>&lt;crr&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) cmprsk object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="tidy.cv.glmnet.html">tidy(<i>&lt;cv.glmnet&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) cv.glmnet object</p></td>
@@ -397,13 +415,13 @@
         <td>
           <p><code><a href="tidy.density.html">tidy(<i>&lt;density&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) density object</p></td>
+        <td><p>(Deprecated) Tidy density objects</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="tidy.dist.html">tidy(<i>&lt;dist&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) dist object</p></td>
+        <td><p>(Deprecated) Tidy dist objects</p></td>
       </tr><tr>
         
         <td>
@@ -457,13 +475,13 @@
         <td>
           <p><code><a href="tidy.ftable.html">tidy(<i>&lt;ftable&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) ftable object</p></td>
+        <td><p>(Deprecated) Tidy ftable objects</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="tidy.gamlss.html">tidy(<i>&lt;gamlss&gt;</i>)</a></code> </p>
+          <p><code><a href="tidy.gam.html">tidy(<i>&lt;gam&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) gamlss object</p></td>
+        <td><p>Tidy a(n) gam object</p></td>
       </tr><tr>
         
         <td>
@@ -587,6 +605,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="tidy.margins.html">tidy(<i>&lt;margins&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) margins object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="tidy.mediate.html">tidy(<i>&lt;mediate&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) mediate object</p></td>
@@ -617,6 +641,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="tidy.mlogit.html">tidy(<i>&lt;mlogit&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidying methods for logit models</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="tidy.muhaz.html">tidy(<i>&lt;muhaz&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) muhaz object</p></td>
@@ -626,6 +656,12 @@
           <p><code><a href="tidy.multinom.html">tidy(<i>&lt;multinom&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidying methods for multinomial logistic regression models</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="tidy.negbin.html">tidy(<i>&lt;negbin&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) negbin object</p></td>
       </tr><tr>
         
         <td>
@@ -785,6 +821,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="tidy.summary.lm.html">tidy(<i>&lt;summary.lm&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) summary.lm object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="tidy.summary_emm.html">tidy(<i>&lt;summary_emm&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) summary_emm object</p></td>
@@ -845,6 +887,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="tidy.varest.html">tidy(<i>&lt;varest&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy a(n) varest object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="tidy.zoo.html">tidy(<i>&lt;zoo&gt;</i>)</a></code> </p>
         </td>
         <td><p>Tidy a(n) zoo object</p></td>
@@ -875,21 +923,27 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="vector_tidiers.html">tidy(<i>&lt;numeric&gt;</i>)</a></code> <code><a href="vector_tidiers.html">tidy(<i>&lt;character&gt;</i>)</a></code> <code><a href="vector_tidiers.html">tidy(<i>&lt;logical&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Tidy atomic vectors</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="glance.Arima.html">glance(<i>&lt;Arima&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) Arima object</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="glance.Gam.html">glance(<i>&lt;Gam&gt;</i>)</a></code> </p>
-        </td>
-        <td><p>Glance at a(n) Gam object</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="glance.Mclust.html">glance(<i>&lt;Mclust&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) Mclust object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="glance.Rchoice.html">glance(<i>&lt;Rchoice&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) Rchoice object</p></td>
       </tr><tr>
         
         <td>
@@ -947,9 +1001,21 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="glance.coeftest.html">glance(<i>&lt;coeftest&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) coeftest object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="glance.coxph.html">glance(<i>&lt;coxph&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) coxph object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="glance.crr.html">glance(<i>&lt;crr&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) crr object</p></td>
       </tr><tr>
         
         <td>
@@ -992,6 +1058,12 @@
           <p><code><a href="glance.fixest.html">glance(<i>&lt;fixest&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) fixest object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="glance.gam.html">glance(<i>&lt;gam&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) gam object</p></td>
       </tr><tr>
         
         <td>
@@ -1067,6 +1139,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="glance.margins.html">glance(<i>&lt;margins&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) margins object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="glance.mfx.html">glance(<i>&lt;mfx&gt;</i>)</a></code> <code><a href="glance.mfx.html">glance(<i>&lt;logitmfx&gt;</i>)</a></code> <code><a href="glance.mfx.html">glance(<i>&lt;negbinmfx&gt;</i>)</a></code> <code><a href="glance.mfx.html">glance(<i>&lt;poissonmfx&gt;</i>)</a></code> <code><a href="glance.mfx.html">glance(<i>&lt;probitmfx&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) mfx object</p></td>
@@ -1079,6 +1157,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="glance.mlogit.html">glance(<i>&lt;mlogit&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) mlogit object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="glance.muhaz.html">glance(<i>&lt;muhaz&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) muhaz object</p></td>
@@ -1088,6 +1172,12 @@
           <p><code><a href="glance.multinom.html">glance(<i>&lt;multinom&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) multinom object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="glance.negbin.html">glance(<i>&lt;negbin&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) negbin object</p></td>
       </tr><tr>
         
         <td>
@@ -1193,6 +1283,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="glance.summary.lm.html">glance(<i>&lt;summary.lm&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Glance at a(n) summary.lm object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="glance.survdiff.html">glance(<i>&lt;survdiff&gt;</i>)</a></code> </p>
         </td>
         <td><p>Glance at a(n) survdiff object</p></td>
@@ -1229,15 +1325,15 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="glance_optim.html">glance_optim()</a></code> </p>
+          <p><code><a href="glance.varest.html">glance(<i>&lt;varest&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Tidy a(n) optim object masquerading as list</p></td>
+        <td><p>Glance at a(n) varest object</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="mgcv_glance_gam.html">glance(<i>&lt;gam&gt;</i>)</a></code> </p>
+          <p><code><a href="glance_optim.html">glance_optim()</a></code> </p>
         </td>
-        <td><p>Glance at a(n) gam object</p></td>
+        <td><p>Tidy a(n) optim object masquerading as list</p></td>
       </tr><tr>
         
         <td>
@@ -1301,6 +1397,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="augment.gam.html">augment(<i>&lt;gam&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Augment data with information from a(n) gam object</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="augment.glm.html">augment(<i>&lt;glm&gt;</i>)</a></code> </p>
         </td>
         <td><p>Augment data with information from a(n) glm object</p></td>
@@ -1358,6 +1460,12 @@
           <p><code><a href="augment.mjoint.html">augment(<i>&lt;mjoint&gt;</i>)</a></code> </p>
         </td>
         <td><p>Augment data with information from a(n) mjoint object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="augment.mlogit.html">augment(<i>&lt;mlogit&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Augment data with information from a(n) mlogit object</p></td>
       </tr><tr>
         
         <td>
@@ -1471,7 +1579,7 @@
         <td>
           <p><code><a href="augment_columns.html">augment_columns()</a></code> </p>
         </td>
-        <td><p>add fitted values, residuals, and other common outputs to
+        <td><p>Add fitted values, residuals, and other common outputs to
 an augment call</p></td>
       </tr>
     </tbody><tbody>
@@ -1492,6 +1600,31 @@ an augment call</p></td>
           <p><code><a href="broom.html">broom</a></code> </p>
         </td>
         <td><p>Convert Statistical Objects into Tidy Tibbles</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="bootstrap.html">bootstrap()</a></code> </p>
+        </td>
+        <td><p>Set up bootstrap replicates of a dplyr operation</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="confint_tidy.html">confint_tidy()</a></code> </p>
+        </td>
+        <td><p>(Deprecated) Calculate confidence interval as a tidy data frame</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="finish_glance.html">finish_glance()</a></code> </p>
+        </td>
+        <td><p>(Deprecated) Add logLik, AIC, BIC, and other common measurements to a
+glance of a prediction</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fix_data_frame.html">fix_data_frame()</a></code> </p>
+        </td>
+        <td><p>Ensure an object is a data frame, with rownames moved into a column</p></td>
       </tr>
     </tbody>
     </table>
@@ -1512,7 +1645,7 @@ an augment call</p></td>
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

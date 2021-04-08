@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="tidyverse-2.css" rel="stylesheet">
-<!--optional theme--><link href=".css" rel="stylesheet">
+<!--optional theme--><link href="tidymodels.css" rel="stylesheet">
 <meta property="og:title" content="Convert Statistical Objects into Tidy Tibbles">
 <meta property="og:description" content="Summarizes key information about statistical
     objects in tidy tibbles. This makes it easy to report results, create
@@ -59,7 +59,7 @@
         <a class="navbar-brand" href="index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -118,6 +118,7 @@
   <div class="contents col-md-9">
 <div id="broom-" class="section level1">
 
+<!-- badges: start -->
 
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
@@ -125,74 +126,79 @@
 <p><code>broom</code> summarizes key information about models in tidy <code>tibble()</code>s. <code>broom</code> provides three verbs to make it convenient to interact with model objects:</p>
 <ul>
 <li>
-<code><a href="https://rdrr.io/pkg/generics/man/tidy.html">tidy()</a></code> summarizes information about model components</li>
+<code><a href="https://generics.r-lib.org/reference/tidy.html">tidy()</a></code> summarizes information about model components</li>
 <li>
-<code><a href="https://rdrr.io/pkg/generics/man/glance.html">glance()</a></code> reports information about the entire model</li>
+<code><a href="https://generics.r-lib.org/reference/glance.html">glance()</a></code> reports information about the entire model</li>
 <li>
-<code><a href="https://rdrr.io/pkg/generics/man/augment.html">augment()</a></code> adds informations about observations to a dataset</li>
+<code><a href="https://generics.r-lib.org/reference/augment.html">augment()</a></code> adds informations about observations to a dataset</li>
 </ul>
 <p>For a detailed introduction, please see <code><a href="articles/broom.html">vignette("broom")</a></code>.</p>
 <p><code>broom</code> tidies 100+ models from popular modelling packages and almost all of the model objects in the <code>stats</code> package that comes with base R. <code><a href="articles/available-methods.html">vignette("available-methods")</a></code> lists method availability.</p>
-<p>If you aren’t familiar with tidy data structures and want to know how they can make your life easier, we highly recommend reading Hadley Wickham’s <a href="http://www.jstatsoft.org/v59/i10">Tidy Data</a>.</p>
+<p>If you aren’t familiar with tidy data structures and want to know how they can make your life easier, we highly recommend reading Hadley Wickham’s <a href="https://www.jstatsoft.org/v59/i10">Tidy Data</a>.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># we recommend installing the entire tidyverse </span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># we recommend installing the entire tidyverse </span>
 <span class="co"># modeling set, which includes broom:</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"tidymodels"</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidymodels"</span><span class="op">)</span>
 
 <span class="co"># alternatively, to install just broom:</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"broom"</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"broom"</span><span class="op">)</span>
 
 <span class="co"># to get the development version from GitHub:</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"tidymodels/broom"</span>)</pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tidymodels/broom"</span><span class="op">)</span></code></pre></div>
 <p>If you find a bug, please file a minimal reproducible example in the <a href="https://github.com/tidymodels/broom/issues">issues</a>.</p>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p><code><a href="https://rdrr.io/pkg/generics/man/tidy.html">tidy()</a></code> produces a <code>tibble()</code> where each row contains information about an important component of the model. For regression models, this often corresponds to regression coefficients. This is can be useful if you want to inspect a model or create custom visualizations.</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">broom</span>)
+<p><code><a href="https://generics.r-lib.org/reference/tidy.html">tidy()</a></code> produces a <code>tibble()</code> where each row contains information about an important component of the model. For regression models, this often corresponds to regression coefficients. This is can be useful if you want to inspect a model or create custom visualizations.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://broom.tidymodels.org/">broom</a></span><span class="op">)</span>
 
-<span class="no">fit</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">Volume</span> ~ <span class="no">Girth</span> + <span class="no">Height</span>, <span class="no">trees</span>)
-<span class="fu"><a href="https://rdrr.io/pkg/generics/man/tidy.html">tidy</a></span>(<span class="no">fit</span>)
+<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Volume</span> <span class="op">~</span> <span class="va">Girth</span> <span class="op">+</span> <span class="va">Height</span>, <span class="va">trees</span><span class="op">)</span>
+<span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 3 x 5</span>
 <span class="co">#&gt;   term        estimate std.error statistic  p.value</span>
 <span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;</span>
 <span class="co">#&gt; 1 (Intercept)  -58.0       8.64      -6.71 2.75e- 7</span>
 <span class="co">#&gt; 2 Girth          4.71      0.264     17.8  8.22e-17</span>
-<span class="co">#&gt; 3 Height         0.339     0.130      2.61 1.45e- 2</span></pre></div>
-<p><code><a href="https://rdrr.io/pkg/generics/man/glance.html">glance()</a></code> returns a tibble with exactly one row of goodness of fitness measures and related statistics. This is useful to check for model misspecification and to compare many models.</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/generics/man/glance.html">glance</a></span>(<span class="no">fit</span>)
+<span class="co">#&gt; 3 Height         0.339     0.130      2.61 1.45e- 2</span></code></pre></div>
+<p><code><a href="https://generics.r-lib.org/reference/glance.html">glance()</a></code> returns a tibble with exactly one row of goodness of fitness measures and related statistics. This is useful to check for model misspecification and to compare many models.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://generics.r-lib.org/reference/glance.html">glance</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 12</span>
 <span class="co">#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC</span>
 <span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
 <span class="co">#&gt; 1     0.948         0.944  3.88      255. 1.07e-18     2  -84.5  177.  183.</span>
-<span class="co">#&gt; # … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</span></pre></div>
+<span class="co">#&gt; # … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</span></code></pre></div>
 <p><code>augment</code> adds columns to a dataset, containing information such as fitted values, residuals or cluster assignments. All columns added to a dataset have <code>.</code> prefix to prevent existing columns from being overwritten.</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/generics/man/augment.html">augment</a></span>(<span class="no">fit</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">trees</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://generics.r-lib.org/reference/augment.html">augment</a></span><span class="op">(</span><span class="va">fit</span>, data <span class="op">=</span> <span class="va">trees</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 31 x 9</span>
 <span class="co">#&gt;    Girth Height Volume .fitted .resid .std.resid   .hat .sigma   .cooksd</span>
 <span class="co">#&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1   8.3     70   10.3    4.84 -5.46      1.50   0.116    3.79 0.0978   </span>
-<span class="co">#&gt;  2   8.6     65   10.3    4.55 -5.75      1.60   0.147    3.77 0.148    </span>
-<span class="co">#&gt;  3   8.8     63   10.2    4.82 -5.38      1.53   0.177    3.78 0.167    </span>
-<span class="co">#&gt;  4  10.5     72   16.4   15.9  -0.526     0.140  0.0592   3.95 0.000409 </span>
-<span class="co">#&gt;  5  10.7     81   18.8   19.9   1.07     -0.294  0.121    3.95 0.00394  </span>
-<span class="co">#&gt;  6  10.8     83   19.7   21.0   1.32     -0.370  0.156    3.94 0.00840  </span>
-<span class="co">#&gt;  7  11       66   15.6   16.2   0.593    -0.162  0.115    3.95 0.00114  </span>
-<span class="co">#&gt;  8  11       75   18.2   19.2   1.05     -0.277  0.0515   3.95 0.00138  </span>
-<span class="co">#&gt;  9  11.1     80   22.6   21.4  -1.19      0.321  0.0920   3.95 0.00348  </span>
-<span class="co">#&gt; 10  11.2     75   19.9   20.2   0.288    -0.0759 0.0480   3.95 0.0000968</span>
-<span class="co">#&gt; # … with 21 more rows</span></pre></div>
+<span class="co">#&gt;  1   8.3     70   10.3    4.84  5.46      1.50   0.116    3.79 0.0978   </span>
+<span class="co">#&gt;  2   8.6     65   10.3    4.55  5.75      1.60   0.147    3.77 0.148    </span>
+<span class="co">#&gt;  3   8.8     63   10.2    4.82  5.38      1.53   0.177    3.78 0.167    </span>
+<span class="co">#&gt;  4  10.5     72   16.4   15.9   0.526     0.140  0.0592   3.95 0.000409 </span>
+<span class="co">#&gt;  5  10.7     81   18.8   19.9  -1.07     -0.294  0.121    3.95 0.00394  </span>
+<span class="co">#&gt;  6  10.8     83   19.7   21.0  -1.32     -0.370  0.156    3.94 0.00840  </span>
+<span class="co">#&gt;  7  11       66   15.6   16.2  -0.593    -0.162  0.115    3.95 0.00114  </span>
+<span class="co">#&gt;  8  11       75   18.2   19.2  -1.05     -0.277  0.0515   3.95 0.00138  </span>
+<span class="co">#&gt;  9  11.1     80   22.6   21.4   1.19      0.321  0.0920   3.95 0.00348  </span>
+<span class="co">#&gt; 10  11.2     75   19.9   20.2  -0.288    -0.0759 0.0480   3.95 0.0000968</span>
+<span class="co">#&gt; # … with 21 more rows</span></code></pre></div>
 <div id="contributing" class="section level3">
 <h3 class="hasAnchor">
 <a href="#contributing" class="anchor"></a>Contributing</h3>
 <p>We welcome contributions of all types!</p>
-<p>If you have never made a pull request to an R package before, <code>broom</code> is an excellent place to start. Find an <a href="https://github.com/tidymodels/broom/issues/">issue</a> with the <strong>Beginner Friendly</strong> tag and comment that you’d like to take it on and we’ll help you get started.</p>
-<p>We encourage typo corrections, bug reports, bug fixes and feature requests. Feedback on the clarity of the documentation is especially valuable.</p>
+<p>For questions and discussions about tidymodels packages, modeling, and machine learning, please <a href="https://community.rstudio.com/new-topic?category_id=15https://rstd.io/tidymodels-communitytags=tidymodels,question">post on RStudio Community</a>. If you think you have encountered a bug, please <a href="https://github.com/tidymodels/broom/issues">submit an issue</a>. Either way, learn how to create and share a <a href="https://reprex.tidyverse.org/articles/articles/learn-reprex.html">reprex</a> (a minimal, reproducible example), to clearly communicate about your code. Check out further details on <a href="https://www.tidymodels.org/contribute/">contributing guidelines for tidymodels packages</a> and <a href="https://www.tidymodels.org/help/">how to get help</a>.</p>
+<p>If you have never directly contributed to an R package before, <code>broom</code> is an excellent place to start. Find an <a href="https://github.com/tidymodels/broom/issues/">issue</a> with the <strong>Beginner Friendly</strong> tag and comment that you’d like to take it on and we’ll help you get started.</p>
+<p>Generally, too, we encourage typo corrections, bug reports, bug fixes and feature requests. Feedback on the clarity of the documentation is especially valuable!</p>
 <p>If you are interested in adding tidier methods for new model objects, please read <a href="https://www.tidymodels.org/learn/develop/broom/">this article</a> on the tidymodels website.</p>
 <p>We have a <a href="https://github.com/tidymodels/broom/blob/master/.github/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in <code>broom</code> you agree to abide by its terms.</p>
 </div>
@@ -206,9 +212,9 @@
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=broom">https://​cloud.r-project.org/​package=broom</a>
 </li>
-<li>Browse source code at <br><a href="http://github.com/tidymodels/broom/">http://​github.com/​tidymodels/​broom/​</a>
+<li>Browse source code at <br><a href="https://github.com/tidymodels/broom/">https://​github.com/​tidymodels/​broom/​</a>
 </li>
-<li>Report a bug at <br><a href="http://github.com/tidymodels/broom/issues">http://​github.com/​tidymodels/​broom/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/tidymodels/broom/issues">https://​github.com/​tidymodels/​broom/​issues</a>
 </li>
 </ul>
 </div>
@@ -232,6 +238,7 @@
 <ul class="list-unstyled">
 <li>David Robinson <br><small class="roles"> Author </small>  </li>
 <li>Alex Hayes <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-4985-5160" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Simon Couch <br><small class="roles"> Author </small>  </li>
 <li><a href="authors.html">All authors...</a></li>
 </ul>
 </div>
@@ -239,9 +246,10 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=broom"><img src="https://www.r-pkg.org/badges/version/broom" alt="CRAN status"></a></li>
-<li><a href="https://github.com/tidymodels/broom/actions"><img src="https://github.com/tidymodels/broom/workflows/.github/workflows/R-CMD-check.yaml/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/tidymodels/broom?branch=master"><img src="https://codecov.io/gh/tidymodels/broom/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/tidymodels/broom"><img src="https://github.com/tidymodels/broom/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/github/tidymodels/broom?branch=master"><img src="https://codecov.io/gh/tidymodels/broom/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
+<li><a href="https://CRAN.R-project.org/package=broom"><img src="https://www.r-pkg.org/badges/version/broom" alt="CRAN status"></a></li>
+<li><a href="https://CRAN.R-project.org/package=broom"><img src="https://cranlogs.r-pkg.org/badges/broom" alt="Downloads"></a></li>
 </ul>
 </div>
 </div>
@@ -254,7 +262,7 @@
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

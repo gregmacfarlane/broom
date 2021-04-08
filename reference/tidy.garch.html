@@ -44,7 +44,7 @@
 <link href="../tidyverse-2.css" rel="stylesheet">
 
 <!--optional theme-->
-<link href="../.css" rel="stylesheet">
+<link href="../tidymodels.css" rel="stylesheet">
 
 
 
@@ -100,7 +100,7 @@ specify which components to return." />
         <a class="navbar-brand" href="../index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@ specify which components to return." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -159,7 +159,7 @@ specify which components to return." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Tidy a(n) garch object</h1>
-    <small class="dont-index">Source: <a href='http://github.com/tidymodels/broom/blob/master/R/tseries-tidiers.R'><code>R/tseries-tidiers.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidymodels/broom/blob/master/R/tseries-tidiers.R'><code>R/tseries-tidiers.R</code></a></small>
     <div class="hidden name"><code>tidy.garch.Rd</code></div>
     </div>
 
@@ -173,7 +173,7 @@ specify which components to return.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for garch</span>
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/tidy.html'>tidy</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>x</span>, conf.int <span class='op'>=</span> <span class='cn'>FALSE</span>, conf.level <span class='op'>=</span> <span class='fl'>0.95</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -183,6 +183,17 @@ specify which components to return.</p>
       <td><p>A <code>garch</code> object returned by <code><a href='https://rdrr.io/pkg/tseries/man/garch.html'>tseries::garch()</a></code>.</p></td>
     </tr>
     <tr>
+      <th>conf.int</th>
+      <td><p>Logical indicating whether or not to include a confidence
+interval in the tidied output. Defaults to <code>FALSE</code>.</p></td>
+    </tr>
+    <tr>
+      <th>conf.level</th>
+      <td><p>The confidence level to use for the confidence interval
+if <code>conf.int = TRUE</code>. Must be strictly greater than 0 and less than 1.
+Defaults to 0.95, which corresponds to a 95 percent confidence interval.</p></td>
+    </tr>
+    <tr>
       <th>...</th>
       <td><p>Additional arguments. Not used. Needed to match generic
 signature only. <strong>Cautionary note:</strong> Misspelled arguments will be
@@ -190,7 +201,7 @@ absorbed in <code>...</code>, where they will be ignored. If the misspelled
 argument has a default value, the default value will be used.
 For example, if you pass <code>conf.lvel = 0.9</code>, all computation will
 proceed using <code>conf.level = 0.95</code>. Additionally, if you pass
-<code>newdata = my_tibble</code> to an <code><a href='https://rdrr.io/pkg/generics/man/augment.html'>augment()</a></code> method that does not
+<code>newdata = my_tibble</code> to an <code><a href='https://generics.r-lib.org/reference/augment.html'>augment()</a></code> method that does not
 accept a <code>newdata</code> argument, it will use the default value for
 the <code>data</code> argument.</p></td>
     </tr>
@@ -198,13 +209,15 @@ the <code>data</code> argument.</p></td>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/generics/man/tidy.html'>tidy()</a></code>, <code><a href='https://rdrr.io/pkg/tseries/man/garch.html'>tseries::garch()</a></code></p>
+    <div class='dont-index'><p><code><a href='https://generics.r-lib.org/reference/tidy.html'>tidy()</a></code>, <code><a href='https://rdrr.io/pkg/tseries/man/garch.html'>tseries::garch()</a></code></p>
 <p>Other garch tidiers: 
 <code><a href='glance.garch.html'>glance.garch</a>()</code></p></div>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with columns:</p>
-<dt>estimate</dt><dd><p>The estimated value of the regression term.</p></dd>
+<dt>conf.high</dt><dd><p>Upper bound on the confidence interval for the estimate.</p></dd>
+  <dt>conf.low</dt><dd><p>Lower bound on the confidence interval for the estimate.</p></dd>
+  <dt>estimate</dt><dd><p>The estimated value of the regression term.</p></dd>
   <dt>p.value</dt><dd><p>The two-sided p-value associated with the observed statistic.</p></dd>
   <dt>statistic</dt><dd><p>The value of a T-statistic to use in a hypothesis that the regression term is non-zero.</p></dd>
   <dt>std.error</dt><dd><p>The standard error of the regression term.</p></dd>
@@ -214,12 +227,14 @@ the <code>data</code> argument.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>tseries</span>)</div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'quantmod':</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>tseries</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'quantmod':</span>
 #&gt; <span class='message'>  method            from</span>
 #&gt; <span class='message'>  as.zoo.data.frame zoo </span></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>EuStockMarkets</span>)
-<span class='no'>dax</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diff.html'>diff</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='no'>EuStockMarkets</span>))[, <span class='st'>"DAX"</span>]
-<span class='no'>dax.garch</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tseries/man/garch.html'>garch</a></span>(<span class='no'>dax</span>)</div><div class='output co'>#&gt; 
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>EuStockMarkets</span><span class='op'>)</span>
+<span class='va'>dax</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ergm/man/ergm-terms.html'>diff</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>EuStockMarkets</span><span class='op'>)</span><span class='op'>)</span><span class='op'>[</span>, <span class='st'>"DAX"</span><span class='op'>]</span>
+<span class='va'>dax.garch</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tseries/man/garch.html'>garch</a></span><span class='op'>(</span><span class='va'>dax</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ***** ESTIMATION WITH ANALYTICAL GRADIENT ***** 
 #&gt; 
 #&gt; 
@@ -253,7 +268,7 @@ the <code>data</code> argument.</p></td>
 #&gt;     20   61 -7.666e+03  2.31e-09  8.57e-10  8.6e-06  0.0e+00  2.0e-05  8.57e-10
 #&gt;     21   62 -7.666e+03  5.35e-11  2.25e-13  7.6e-07  0.0e+00  1.6e-06  2.25e-13
 #&gt;     22   63 -7.666e+03  1.81e-12  7.06e-16  1.7e-08  0.0e+00  3.4e-08  7.06e-16
-#&gt;     23   64 -7.666e+03  6.98e-14  1.69e-17  1.0e-09  0.0e+00  2.4e-09  1.69e-17
+#&gt;     23   64 -7.666e+03  7.00e-14  1.69e-17  1.0e-09  0.0e+00  2.4e-09  1.69e-17
 #&gt;     24   65 -7.666e+03 -1.16e-14  1.76e-20  1.9e-10  0.0e+00  4.0e-10  1.76e-20
 #&gt; 
 #&gt;  ***** X- AND RELATIVE FUNCTION CONVERGENCE *****
@@ -267,7 +282,8 @@ the <code>data</code> argument.</p></td>
 #&gt;      1    4.639289e-06     1.000e+00    -2.337e-02
 #&gt;      2    6.832875e-02     1.000e+00    -8.294e-07
 #&gt;      3    8.890666e-01     1.000e+00    -2.230e-06
-#&gt; </div><div class='input'><span class='no'>dax.garch</span></div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='va'>dax.garch</span>
+</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; garch(x = dax)
 #&gt; 
@@ -275,15 +291,17 @@ the <code>data</code> argument.</p></td>
 #&gt;        a0         a1         b1  
 #&gt; 4.639e-06  6.833e-02  8.891e-01  
 #&gt; </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/tidy.html'>tidy</a></span>(<span class='no'>dax.garch</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 3 x 5</span><span>
+<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>dax.garch</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 5</span><span>
 #&gt;   term    estimate   std.error statistic  p.value
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> a0    0.000</span><span style='text-decoration: underline;'>004</span><span>64 0.000</span><span style='text-decoration: underline;'>000</span><span>756      6.14 8.42</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>
-#&gt; </span><span style='color: #555555;'>2</span><span> a1    0.068</span><span style='text-decoration: underline;'>3</span><span>     0.011</span><span style='text-decoration: underline;'>3</span><span>           6.07 1.25</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 9</span><span>
-#&gt; </span><span style='color: #555555;'>3</span><span> b1    0.889      0.016</span><span style='text-decoration: underline;'>5</span><span>          53.8  0.  </span><span style='color: #555555;'> </span><span>   </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/generics/man/glance.html'>glance</a></span>(<span class='no'>dax.garch</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 8</span><span>
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> a0    0.000</span><span style='text-decoration: underline;'>004</span><span>64 0.000</span><span style='text-decoration: underline;'>000</span><span>756      6.14 8.42</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> a1    0.068</span><span style='text-decoration: underline;'>3</span><span>     0.011</span><span style='text-decoration: underline;'>3</span><span>           6.07 1.25</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> b1    0.889      0.016</span><span style='text-decoration: underline;'>5</span><span>          53.8  0.  </span><span style='color: #949494;'> </span><span>   </div><div class='input'><span class='fu'><a href='https://generics.r-lib.org/reference/glance.html'>glance</a></span><span class='op'>(</span><span class='va'>dax.garch</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 1 x 8</span><span>
 #&gt;   statistic p.value parameter method         logLik     AIC   BIC  nobs
-#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span>     0.136   0.713         1 Box-Ljung test  </span><span style='text-decoration: underline;'>5</span><span>958. -</span><span style='color: #BB0000;text-decoration: underline;'>11</span><span style='color: #BB0000;'>911.</span><span>    </span><span style='color: #BB0000;'>NA</span><span>  </span><span style='text-decoration: underline;'>1</span><span>859</div></span></pre>
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span>     0.136   0.713         1 Box-Ljung test  </span><span style='text-decoration: underline;'>5</span><span>958. -</span><span style='color: #BB0000;text-decoration: underline;'>11</span><span style='color: #BB0000;'>911.</span><span>    </span><span style='color: #BB0000;'>NA</span><span>  </span><span style='text-decoration: underline;'>1</span><span>859</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -300,7 +318,7 @@ the <code>data</code> argument.</p></td>
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

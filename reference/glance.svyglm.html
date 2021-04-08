@@ -44,7 +44,7 @@
 <link href="../tidyverse-2.css" rel="stylesheet">
 
 <!--optional theme-->
-<link href="../.css" rel="stylesheet">
+<link href="../tidymodels.css" rel="stylesheet">
 
 
 
@@ -109,7 +109,7 @@ of the appropriate type." />
         <a class="navbar-brand" href="../index.html">broom</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.6</span>
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@ of the appropriate type." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/broom">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -168,7 +168,7 @@ of the appropriate type." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Glance at a(n) svyglm object</h1>
-    <small class="dont-index">Source: <a href='http://github.com/tidymodels/broom/blob/master/R/survey-tidiers.R'><code>R/survey-tidiers.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidymodels/broom/blob/master/R/survey-tidiers.R'><code>R/survey-tidiers.R</code></a></small>
     <div class="hidden name"><code>glance.svyglm.Rd</code></div>
     </div>
 
@@ -191,7 +191,7 @@ of the appropriate type.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for svyglm</span>
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/glance.html'>glance</a></span>(<span class='no'>x</span>, <span class='kw'>maximal</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://generics.r-lib.org/reference/glance.html'>glance</a></span><span class='op'>(</span><span class='va'>x</span>, maximal <span class='op'>=</span> <span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -215,7 +215,7 @@ absorbed in <code>...</code>, where they will be ignored. If the misspelled
 argument has a default value, the default value will be used.
 For example, if you pass <code>conf.lvel = 0.9</code>, all computation will
 proceed using <code>conf.level = 0.95</code>. Additionally, if you pass
-<code>newdata = my_tibble</code> to an <code><a href='https://rdrr.io/pkg/generics/man/augment.html'>augment()</a></code> method that does not
+<code>newdata = my_tibble</code> to an <code><a href='https://generics.r-lib.org/reference/augment.html'>augment()</a></code> method that does not
 accept a <code>newdata</code> argument, it will use the default value for
 the <code>data</code> argument.</p></td>
     </tr>
@@ -224,8 +224,7 @@ the <code>data</code> argument.</p></td>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Lumley T, Scott A (2015). AIC and BIC for modelling with complex
-survey data. <em>Journal of Survey Statistics and Methodology</em>, 3(1).
-<a href='https://doi.org/10.1093/jssam/smu021'>https://doi.org/10.1093/jssam/smu021</a>.</p>
+survey data. <em>Journal of Survey Statistics and Methodology</em>, 3(1).</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/survey/man/svyglm.html'>survey::svyglm()</a></code>, <code><a href='https://rdrr.io/r/stats/glm.html'>stats::glm()</a></code>, <a href='https://rdrr.io/pkg/survey/man/anova.svyglm.html'>survey::anova.svyglm</a></p>
@@ -234,10 +233,12 @@ survey data. <em>Journal of Survey Statistics and Methodology</em>, 3(1).
 <code><a href='augment.lm.html'>augment.lm</a>()</code>,
 <code><a href='glance.glm.html'>glance.glm</a>()</code>,
 <code><a href='glance.lm.html'>glance.lm</a>()</code>,
+<code><a href='glance.summary.lm.html'>glance.summary.lm</a>()</code>,
 <code><a href='tidy.glm.html'>tidy.glm</a>()</code>,
 <code><a href='tidy.lm.beta.html'>tidy.lm.beta</a>()</code>,
 <code><a href='tidy.lm.html'>tidy.lm</a>()</code>,
-<code><a href='tidy.mlm.html'>tidy.mlm</a>()</code></p></div>
+<code><a href='tidy.mlm.html'>tidy.mlm</a>()</code>,
+<code><a href='tidy.summary.lm.html'>tidy.summary.lm</a>()</code></p></div>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with exactly one row and columns:</p>
@@ -252,33 +253,35 @@ survey data. <em>Journal of Survey Statistics and Methodology</em>, 3(1).
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>survey</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: grid</span></div><div class='output co'>#&gt; <span class='message'></span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://r-survey.r-forge.r-project.org/survey/'>survey</a></span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: grid</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: ‘survey’</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from ‘package:drc’:</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    twophase</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from ‘package:graphics’:</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    dotchart</span></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>api</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>api</span><span class='op'>)</span>
 
 <span class='co'># survey design</span>
-<span class='no'>dstrat</span> <span class='kw'>&lt;-</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/survey/man/svydesign.html'>svydesign</a></span>(
-    <span class='kw'>id</span> <span class='kw'>=</span> ~<span class='fl'>1</span>,
-    <span class='kw'>strata</span> <span class='kw'>=</span> ~<span class='no'>stype</span>,
-    <span class='kw'>weights</span> <span class='kw'>=</span> ~<span class='no'>pw</span>,
-    <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>apistrat</span>,
-    <span class='kw'>fpc</span> <span class='kw'>=</span> ~<span class='no'>fpc</span>
-  )
+<span class='va'>dstrat</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/survey/man/svydesign.html'>svydesign</a></span><span class='op'>(</span>
+    id <span class='op'>=</span> <span class='op'>~</span><span class='fl'>1</span>,
+    strata <span class='op'>=</span> <span class='op'>~</span><span class='va'>stype</span>,
+    weights <span class='op'>=</span> <span class='op'>~</span><span class='va'>pw</span>,
+    data <span class='op'>=</span> <span class='va'>apistrat</span>,
+    fpc <span class='op'>=</span> <span class='op'>~</span><span class='va'>fpc</span>
+  <span class='op'>)</span>
 
 <span class='co'># model</span>
-<span class='no'>m</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>survey</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/survey/man/svyglm.html'>svyglm</a></span>(
-  <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>sch.wide</span> ~ <span class='no'>ell</span> + <span class='no'>meals</span> + <span class='no'>mobility</span>,
-  <span class='kw'>design</span> <span class='kw'>=</span> <span class='no'>dstrat</span>,
-  <span class='kw'>family</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasibinomial</a></span>()
-)
+<span class='va'>m</span> <span class='op'>&lt;-</span> <span class='fu'>survey</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/survey/man/svyglm.html'>svyglm</a></span><span class='op'>(</span>
+  formula <span class='op'>=</span> <span class='va'>sch.wide</span> <span class='op'>~</span> <span class='va'>ell</span> <span class='op'>+</span> <span class='va'>meals</span> <span class='op'>+</span> <span class='va'>mobility</span>,
+  design <span class='op'>=</span> <span class='va'>dstrat</span>,
+  family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasibinomial</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/glance.html'>glance</a></span>(<span class='no'>m</span>)</div><div class='output co'>#&gt; <span class='error'>Error in .svycheck(design): object 'dstrat' not found</span></div></pre>
+<span class='fu'><a href='https://generics.r-lib.org/reference/glance.html'>glance</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in .svycheck(design): object 'dstrat' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -295,7 +298,7 @@ survey data. <em>Journal of Survey Statistics and Methodology</em>, 3(1).
 
 <div class="author">
   <p>
-    Developed by David Robinson, Alex Hayes.
+    Developed by David Robinson, Alex Hayes, Simon Couch.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>

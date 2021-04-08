@@ -34,6 +34,9 @@
     <loc>https://broom.tidymodels.org/reference/augment.fixest.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/augment.gam.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/augment.glm.html</loc>
   </url>
   <url>
@@ -62,6 +65,9 @@
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/augment.mjoint.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/augment.mlogit.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/augment.nlrq.html</loc>
@@ -121,19 +127,34 @@
     <loc>https://broom.tidymodels.org/reference/augment_columns.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/bootstrap.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/broom.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/confint_tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/data.frame_tidiers.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/durbinWatsonTest_tidiers.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/finish_glance.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/fix_data_frame.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance.Arima.html</loc>
   </url>
   <url>
-    <loc>https://broom.tidymodels.org/reference/glance.Gam.html</loc>
+    <loc>https://broom.tidymodels.org/reference/glance.Mclust.html</loc>
   </url>
   <url>
-    <loc>https://broom.tidymodels.org/reference/glance.Mclust.html</loc>
+    <loc>https://broom.tidymodels.org/reference/glance.Rchoice.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.aareg.html</loc>
@@ -163,7 +184,13 @@
     <loc>https://broom.tidymodels.org/reference/glance.clmm.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/glance.coeftest.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance.coxph.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/glance.crr.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.cv.glmnet.html</loc>
@@ -185,6 +212,9 @@
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.fixest.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/glance.gam.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.garch.html</loc>
@@ -223,16 +253,25 @@
     <loc>https://broom.tidymodels.org/reference/glance.lmodel2.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/glance.margins.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance.mfx.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.mjoint.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/glance.mlogit.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance.muhaz.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.multinom.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/glance.negbin.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/glance.nlrq.html</loc>
@@ -286,6 +325,9 @@
     <loc>https://broom.tidymodels.org/reference/glance.speedlm.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/glance.summary.lm.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance.survdiff.html</loc>
   </url>
   <url>
@@ -304,19 +346,19 @@
     <loc>https://broom.tidymodels.org/reference/glance.svyolr.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/glance.varest.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/glance_optim.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/leveneTest_tidiers.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/list_tidiers.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/metafor_tidiers.html</loc>
-  </url>
-  <url>
-    <loc>https://broom.tidymodels.org/reference/mgcv_glance_gam.html</loc>
-  </url>
-  <url>
-    <loc>https://broom.tidymodels.org/reference/mgcv_tidy_gam.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/null_tidiers.html</loc>
@@ -331,16 +373,19 @@
     <loc>https://broom.tidymodels.org/reference/sparse_tidiers.html</loc>
   </url>
   <url>
-    <loc>https://broom.tidymodels.org/reference/tidy.Arima.html</loc>
+    <loc>https://broom.tidymodels.org/reference/summary_tidiers.html</loc>
   </url>
   <url>
-    <loc>https://broom.tidymodels.org/reference/tidy.Gam.html</loc>
+    <loc>https://broom.tidymodels.org/reference/tidy.Arima.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.Kendall.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.Mclust.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.Rchoice.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.TukeyHSD.html</loc>
@@ -406,6 +451,9 @@
     <loc>https://broom.tidymodels.org/reference/tidy.coxph.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.crr.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/tidy.cv.glmnet.html</loc>
   </url>
   <url>
@@ -442,7 +490,7 @@
     <loc>https://broom.tidymodels.org/reference/tidy.ftable.html</loc>
   </url>
   <url>
-    <loc>https://broom.tidymodels.org/reference/tidy.gamlss.html</loc>
+    <loc>https://broom.tidymodels.org/reference/tidy.gam.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.garch.html</loc>
@@ -505,6 +553,9 @@
     <loc>https://broom.tidymodels.org/reference/tidy.map.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.margins.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/tidy.mediate.html</loc>
   </url>
   <url>
@@ -520,10 +571,16 @@
     <loc>https://broom.tidymodels.org/reference/tidy.mlm.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.mlogit.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/tidy.muhaz.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.multinom.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.negbin.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy.nlrq.html</loc>
@@ -604,6 +661,9 @@
     <loc>https://broom.tidymodels.org/reference/tidy.summary.glht.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.summary.lm.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/tidy.summary_emm.html</loc>
   </url>
   <url>
@@ -634,6 +694,9 @@
     <loc>https://broom.tidymodels.org/reference/tidy.ts.html</loc>
   </url>
   <url>
+    <loc>https://broom.tidymodels.org/reference/tidy.varest.html</loc>
+  </url>
+  <url>
     <loc>https://broom.tidymodels.org/reference/tidy.zoo.html</loc>
   </url>
   <url>
@@ -647,6 +710,9 @@
   </url>
   <url>
     <loc>https://broom.tidymodels.org/reference/tidy_xyz.html</loc>
+  </url>
+  <url>
+    <loc>https://broom.tidymodels.org/reference/vector_tidiers.html</loc>
   </url>
   <url>
     <loc>https://broom.tidymodels.org/articles/adding-tidiers.html</loc>
