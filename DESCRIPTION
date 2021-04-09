@@ -534,6 +534,7 @@ Imports:
 Suggests:
     AER,
     akima,
+    apollo,
     AUC,
     bbmle,
     betareg,
