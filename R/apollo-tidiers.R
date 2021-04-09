@@ -4,6 +4,10 @@
 #' estimated with the `apollo` package.
 #' 
 #' @param x an object returned from [apollo::apollo_estimate()]
+#' @param nest.params A character vector with the names of nesting coefficient 
+#'   parameters. For these parameters the null hypothesis is that the 
+#'   value is 1 rather than the traditional 0; the t-statistic for this
+#'   parameter will be calculated appropriately if given.
 #' @template param_confint
 #' @template param_unused_dots
 #' 
@@ -32,6 +36,7 @@
 #' @seealso [tidy()], [apollo::apollo_estimate()]
 #' 
 tidy.apollo <- function(x, conf.int = FALSE, se.type = c("default", "robust"), 
+                        nest.params = NULL,
                         conf.level = 0.95, ...){
   
   # get estimated variables 
@@ -46,12 +51,19 @@ tidy.apollo <- function(x, conf.int = FALSE, se.type = c("default", "robust"),
     robust <- TRUE
   }
   
+  # vector of null hypothesis values
+  t_null <- rep(0, length(varnames))
+  names(t_null) <- varnames
+  if(!is.null(nest.params)){
+    t_null[nest.params] <- 1
+  }
+  
   # construct parameter table
   ret <- tibble::tibble(
     term = varnames,
     estimate = x$estimate[varnames],
     std.error = se,
-    statistic = estimate / std.error,
+    statistic = (estimate - t_null) / std.error,
     p.val = 2 * pnorm(statistic)
   ) 
   
