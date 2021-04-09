@@ -17,11 +17,12 @@
 #' @examples
 #' \dontrun{
 #'   apollo_mnl
-#'   tidy.apollo(apollo_mnl) 
-#'   tidy.apollo(apollo_mnl, se.type = "robust") 
-#'   tidy.apollo(apollo_mnl, conf.int = TRUE) 
+#'   class(apollo_mnl) <- c("apollo", class(apollo_mnl))
+#'   tidy(apollo_mnl) 
+#'   tidy(apollo_mnl, se.type = "robust") 
+#'   tidy(apollo_mnl, conf.int = TRUE) 
 #' 
-#'   glance.apollo(apollo_mnl)
+#'   glance(apollo_mnl)
 #' }
 #' 
 #' @aliases apollo_tidiers
