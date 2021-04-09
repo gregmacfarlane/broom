@@ -46,8 +46,13 @@ mjoint_fit2 <- mjoint(
 mjoint_fit_bs_se <- bootSE(mjoint_fit, nboot = 5, safe.boot = TRUE)
 mjoint_fit2_bs_se <- bootSE(mjoint_fit2, nboot = 5, safe.boot = TRUE)
 
+# apollo model output created separately from 
+#   http://www.apollochoicemodelling.com/files/Apollo_example_1.r
+apollo_mnl <- readr::read_rds("data-raw/apollo_mnl.rds")
+
 usethis::use_data(
   mjoint_fit, mjoint_fit2,
   mjoint_fit_bs_se, mjoint_fit2_bs_se,
+  apollo_mnl,
   internal = TRUE, overwrite = TRUE
 )
