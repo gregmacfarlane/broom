@@ -627,6 +627,7 @@ Collate:
     'aaa-documentation-helper.R'
     'null-and-default-tidiers.R'
     'aer-tidiers.R'
+    'apollo-tidiers.R'
     'auc-tidiers.R'
     'base-tidiers.R'
     'bbmle-tidiers.R'
